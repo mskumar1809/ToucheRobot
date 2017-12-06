@@ -1,0 +1,30 @@
+*** Settings ***
+Documentation  A resource file containing the application specific keywords
+Library  Selenium2Library
+Library  com.crossover.robotframework.JavaRobot.KeywordImplementations
+
+*** Variables ***
+${URL} =  https://gotouche.com/
+${BROWSER}=  chrome
+${EMAIL}=  toucheuser@gmail.com
+${PASSWORD}=  touche
+${COUNTRYCODE}=  +34
+${PHONENUMBER}=  619229736
+
+
+
+*** Test Cases ***
+
+Login UserCase with Mobile Number
+
+	Given I am at the Touche Login Screen  ${URL}  ${BROWSER}
+	When I Select the Mobile Option to login
+	And I Enter mobile number   ${COUNTRYCODE}  ${PHONENUMBER}
+	And I Enter password  ${PASSWORD}
+	And I Login into the application
+	Then I should see the payments list
+	
+
+	
+    
+    
