@@ -1,17 +1,9 @@
 package com.Touche.robotframework.JavaRobot;
 
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
-import org.openqa.selenium.WebElement;
-
-import org.openqa.selenium.support.FindBy;
-
-import org.openqa.selenium.support.How;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 
 public class ToucheLandingPage {
 
@@ -52,11 +44,6 @@ public class ToucheLandingPage {
 		driver.findElement(LoginButton).click();
 	}
 
-	public void selectTheMobileOption() {
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.findElement(Mobile).click();
-	}
-
 	public void enterMobileNumber(String countryCode, String phoneNumber) {
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		driver.findElement(CountryCode).click();
@@ -83,11 +70,10 @@ public class ToucheLandingPage {
 
 	public void selectTheLoginOption(String loginOption) {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		if (loginOption.equals(Mobile)) 
+		if (loginOption.equals("Mobile")) 
 			driver.findElement(Mobile).click();
 		else 
-			driver.findElement(EmailIcon).click();
-		
+			driver.findElement(EmailIcon).click();	
 	}
 
 	public void enterEmail(String email) {

@@ -23,7 +23,7 @@ ${PHONENUMBER}=  619229736
 Login UserCase with Mobile Number
 
 	Given I am at the Touche Login Screen  ${URL}
-	When I Select the Mobile Option to login
+	When I Select the Option to login  ${MOBILELOGINOPTION}
 	And I Enter mobile number   ${COUNTRYCODE}  ${PHONENUMBER}
 	And I Enter password  ${PASSWORD}
 	And I Login into the application
