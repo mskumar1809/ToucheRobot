@@ -28,36 +28,36 @@ public class KeywordImplementations {
 	
 
 	@RobotKeyword("Set Up")
-	public void SetUp(){
+	public void setUp(){
 	 driver = new ChromeDriver();
 	 objcrossoverlandingpage = new ToucheLandingPage(driver);
 	}
 	
 	@RobotKeyword("I am at the Touche Login Screen")
 	@ArgumentNames({ "URL" })
-	public void IAmAtTheToucheLoginScreen(String url) {
+	public void iAmAtTheToucheLoginScreen(String url) {
 		driver.get(url);
 		Assert.assertTrue(driver.getCurrentUrl().contains(url));
-		MaximizeBrowser();
-		NavigatetoLoginPage();
+		maximizeBrowser();
+		navigateToLoginPage();
 
 	}
 	
-	public void MaximizeBrowser() {
+	public void maximizeBrowser() {
 		driver.manage().window().maximize();
 	}
 
-	public void NavigatetoLoginPage() {
+	public void navigateToLoginPage() {
 
-		objcrossoverlandingpage.NavigatetoLoginPage();
+		objcrossoverlandingpage.navigateToLoginPage();
 
 	}
 
 	@RobotKeyword("I Select the Mobile Option to login")
 	@Test
-	public void ISelectTheMobileOptionToLogin() {
+	public void iSelectTheMobileOptionToLogin() {
 
-		objcrossoverlandingpage.SelectTheMobileOption();
+		objcrossoverlandingpage.selectTheMobileOption();
 
 	}
 	
@@ -65,9 +65,9 @@ public class KeywordImplementations {
 	@RobotKeyword("I Select the Option to login")
 	@ArgumentNames({ "MOBILELOGINOPTION" })
 
-	public void ISelectTheOptionToLogin(String loginOption) {
+	public void iSelectTheOptionToLogin(String loginOption) {
 
-		objcrossoverlandingpage.SelectTheLoginOption(loginOption);
+		objcrossoverlandingpage.selectTheLoginOption(loginOption);
 
 	}
 
@@ -75,9 +75,9 @@ public class KeywordImplementations {
 	@RobotKeyword("I Enter mobile number")
 	@ArgumentNames({ "COUNTRYCODE", "PHONENUMBER" })
 
-	public void IEnterMobileNumber(String countryCode, String phoneNumber) {
+	public void iEnterMobileNumber(String countryCode, String phoneNumber) {
 
-		objcrossoverlandingpage.EnterMobileNumber(countryCode, phoneNumber);
+		objcrossoverlandingpage.enterMobileNumber(countryCode, phoneNumber);
 
 	}
 	
@@ -85,38 +85,38 @@ public class KeywordImplementations {
 	@RobotKeyword("I Enter Email")
 	@ArgumentNames({ "Email" })
 
-	public void IEnterEmail(String email) {
+	public void iEnterEmail(String email) {
 
-		objcrossoverlandingpage.EnterEmail(email);
+		objcrossoverlandingpage.enterEmail(email);
 
 	}
 
 	@RobotKeyword("I Enter password")
 	@ArgumentNames({ "PASSWORD" })
 
-	public void IEnterPassword(String password) {
+	public void iEnterPassword(String password) {
 
-		objcrossoverlandingpage.EnterPassword(password);
+		objcrossoverlandingpage.enterPassword(password);
 
 	}
 
 	@RobotKeyword("I Login into the application")
 
-	public void ILoginIntoTheApplication() {
+	public void iLoginIntoTheApplication() {
 
-		objcrossoverlandingpage.LoginIntoTheApplication();
+		objcrossoverlandingpage.loginIntoTheApplication();
 
 	}
 
 	@RobotKeyword("I should see the payments list")
-	public void IShouldSeeThePaymentsList() {
+	public void iShouldSeeThePaymentsList() {
 
 		objcrossoverlandingpage.assertPaymentsList();
 
 	}
 	
 	@RobotKeyword("Tear Down")
-	public void TearDown() {
+	public void tearDown() {
 
 		driver.quit();
 	}

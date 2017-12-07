@@ -46,30 +46,30 @@ public class ToucheLandingPage {
 		this.driver = driver;
 	}
 
-	public void NavigatetoLoginPage() {
+	public void navigateToLoginPage() {
 		driver.findElement(LoginNavigation).click();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.findElement(LoginButton).click();
 	}
 
-	public void SelectTheMobileOption() {
+	public void selectTheMobileOption() {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.findElement(Mobile).click();
 	}
 
-	public void EnterMobileNumber(String countryCode, String phoneNumber) {
+	public void enterMobileNumber(String countryCode, String phoneNumber) {
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		driver.findElement(CountryCode).click();
 		driver.findElement(Spain).click();
 		driver.findElement(PhoneNumber).sendKeys(phoneNumber);
 	}
 
-	public void EnterPassword(String password) {
+	public void enterPassword(String password) {
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		driver.findElement(Password).sendKeys(password);
 	}
 
-	public void LoginIntoTheApplication() {
+	public void loginIntoTheApplication() {
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		driver.findElement(LoginSubmit).click();
 	}
@@ -81,7 +81,7 @@ public class ToucheLandingPage {
 
 	}
 
-	public void SelectTheLoginOption(String loginOption) {
+	public void selectTheLoginOption(String loginOption) {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		if (loginOption.equals(Mobile)) 
 			driver.findElement(Mobile).click();
@@ -90,7 +90,7 @@ public class ToucheLandingPage {
 		
 	}
 
-	public void EnterEmail(String email) {
+	public void enterEmail(String email) {
 		driver.findElement(EmailTextField).sendKeys(email);
 		
 	}
