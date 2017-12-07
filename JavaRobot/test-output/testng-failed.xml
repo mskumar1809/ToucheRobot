@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.crossover.robotframework.JavaRobot.KeywordImplementations">
+      <class name="com.Touche.robotframework.JavaRobot.KeywordImplementations">
         <methods>
-          <include name="LaunchCrossoverWebsite"/>
+          <include name="TearDown"/>
+          <include name="IAmAtTheToucheLoginScreen"/>
+          <include name="ISelectTheMobileOptionToLogin"/>
         </methods>
-      </class> <!-- com.crossover.robotframework.JavaRobot.KeywordImplementations -->
+      </class> <!-- com.Touche.robotframework.JavaRobot.KeywordImplementations -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
