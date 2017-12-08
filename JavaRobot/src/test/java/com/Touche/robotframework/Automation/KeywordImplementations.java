@@ -1,4 +1,4 @@
-package com.Touche.robotframework.JavaRobot;
+package com.Touche.robotframework.Automation;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.*;
@@ -7,20 +7,20 @@ import org.robotframework.javalib.annotation.RobotKeyword;
 import org.robotframework.javalib.annotation.RobotKeywords;
 import org.testng.Assert;
 
-import com.Touche.robotframework.JavaRobot.ToucheLandingPage;
+import com.Touche.robotframework.Automation.ToucheLandingPage;
 
 @RobotKeywords
 
 public class KeywordImplementations {
 	static WebDriver driver;
-	ToucheLandingPage objcrossoverlandingpage;
+	ToucheLandingPage objToucheLandingPage;
 
 	
 
 	@RobotKeyword("Set Up")
 	public void setUp(){
 	 driver = new ChromeDriver();
-	 objcrossoverlandingpage = new ToucheLandingPage(driver);
+	 objToucheLandingPage = new ToucheLandingPage(driver);
 	}
 	
 	@RobotKeyword("I am at the Touche Login Screen")
@@ -38,7 +38,7 @@ public class KeywordImplementations {
 	}
 
 	public void navigateToLoginPage() {
-		objcrossoverlandingpage.navigateToLoginPage();
+		objToucheLandingPage.navigateToLoginPage();
 
 	}
 	
@@ -46,7 +46,7 @@ public class KeywordImplementations {
 	@RobotKeyword("I Select the Option to login")
 	@ArgumentNames({ "EMAIlLOGINOPTION" })
 	public void iSelectTheOptionToLogin(String loginOption) {
-		objcrossoverlandingpage.selectTheLoginOption(loginOption);
+		objToucheLandingPage.selectTheLoginOption(loginOption);
 
 	}
 
@@ -54,7 +54,7 @@ public class KeywordImplementations {
 	@RobotKeyword("I Enter mobile number")
 	@ArgumentNames({ "COUNTRYCODE", "PHONENUMBER" })
 	public void iEnterMobileNumber(String countryCode, String phoneNumber) {
-		objcrossoverlandingpage.enterMobileNumber(countryCode, phoneNumber);
+		objToucheLandingPage.enterMobileNumber(countryCode, phoneNumber);
 
 	}
 	
@@ -62,26 +62,26 @@ public class KeywordImplementations {
 	@RobotKeyword("I Enter Email")
 	@ArgumentNames({ "Email" })
 	public void iEnterEmail(String email) {
-		objcrossoverlandingpage.enterEmail(email);
+		objToucheLandingPage.enterEmail(email);
 
 	}
 
 	@RobotKeyword("I Enter password")
 	@ArgumentNames({ "PASSWORD" })
 	public void iEnterPassword(String password) {
-		objcrossoverlandingpage.enterPassword(password);
+		objToucheLandingPage.enterPassword(password);
 
 	}
 
 	@RobotKeyword("I Login into the application")
 	public void iLoginIntoTheApplication() {
-		objcrossoverlandingpage.loginIntoTheApplication();
+		objToucheLandingPage.loginIntoTheApplication();
 
 	}
 
 	@RobotKeyword("I should see the payments list")
 	public void iShouldSeeThePaymentsList() {
-		objcrossoverlandingpage.assertPaymentsList();
+		objToucheLandingPage.assertPaymentsList();
 
 	}
 	

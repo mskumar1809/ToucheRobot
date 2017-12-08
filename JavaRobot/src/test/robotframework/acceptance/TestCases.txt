@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation  A resource file containing the application specific keywords
 Library  Selenium2Library
-Library  com.Touche.robotframework.JavaRobot.KeywordImplementations
+Library  com.Touche.robotframework.Automation.KeywordImplementations
 
 Test Setup       Set up
 Test Teardown    Tear Down
@@ -21,7 +21,7 @@ ${PHONENUMBER}=  619229736
 *** Test Cases ***
 
 Login UserCase with Mobile Number
-
+    [Tags]    Feature Testing
 	Given I am at the Touche Login Screen  ${URL}
 	When I Select the Option to login  ${MOBILELOGINOPTION}
 	And I Enter mobile number   ${COUNTRYCODE}  ${PHONENUMBER}
@@ -30,6 +30,7 @@ Login UserCase with Mobile Number
 	Then I should see the payments list
 	
 Login UserCase with Email
+    [Tags]    Feature Testing
 
 	Given I am at the Touche Login Screen  ${URL}
 	When I Select the Option to login  ${EMAILLOGINOPTION}

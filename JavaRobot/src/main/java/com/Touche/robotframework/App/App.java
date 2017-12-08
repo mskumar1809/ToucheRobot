@@ -1,4 +1,4 @@
-package com.crossover.robotframework.JavaRobot;
+package com.Touche.robotframework.App;
 
 /**
  * Hello world!

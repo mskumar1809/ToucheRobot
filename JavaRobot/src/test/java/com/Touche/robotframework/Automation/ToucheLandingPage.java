@@ -1,4 +1,4 @@
-package com.Touche.robotframework.JavaRobot;
+package com.Touche.robotframework.Automation;
 
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
