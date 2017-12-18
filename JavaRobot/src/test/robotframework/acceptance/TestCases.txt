@@ -1,5 +1,12 @@
 *** Settings ***
-Documentation  A resource file containing the application specific keywords
+Documentation  User Story:
+...
+...    As a registered user of Gotouche,
+...
+...    I should be able to Login into the application successfully using valid Mobile number and its corresponding Password
+...
+...    I should be able to login into the application successfully using Email Address and its corresponding Password
+
 Library  Selenium2Library
 Library  com.Touche.robotframework.Automation.KeywordImplementations
 
@@ -20,8 +27,10 @@ ${PHONENUMBER}=  619229736
 
 *** Test Cases ***
 
-Login UserCase with Mobile Number
+Scenario: Login UserCase with Mobile Number
+
     [Tags]    Feature Testing
+    
 	Given I am at the Touche Login Screen  ${URL}
 	When I Select the Option to login  ${MOBILELOGINOPTION}
 	And I Enter mobile number   ${COUNTRYCODE}  ${PHONENUMBER}
@@ -29,7 +38,8 @@ Login UserCase with Mobile Number
 	And I Login into the application
 	Then I should see the payments list
 	
-Login UserCase with Email
+Scenario: Login UserCase with Email
+
     [Tags]    Feature Testing
 
 	Given I am at the Touche Login Screen  ${URL}
